@@ -30,3 +30,14 @@ curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request DELETE "https://ap
 curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request DELETE "https://api.github.com/repos/$ORGANIZATION/$REPO/labels/question"
 curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request DELETE "https://api.github.com/repos/$ORGANIZATION/$REPO/labels/wontfix"
 curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request DELETE "https://api.github.com/repos/$ORGANIZATION/$REPO/labels/help%20wanted"
+
+
+#
+# A list of labels you wish to create with their respective colors
+#
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"priority 1","color":"fbca04"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"priority 2","color":"fbca04"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"priority 3","color":"fbca04"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"priority 4","color":"fbca04"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"priority 5","color":"fbca04"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
+curl --user "$ORGANIZATION:$ACCESS_TOKEN" --include --request POST --data '{"name":"ready for review","color":"009800"}' "https://api.github.com/repos/$ORGANIZATION/$REPO/labels"
